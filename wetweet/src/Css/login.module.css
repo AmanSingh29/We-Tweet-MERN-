@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+
+.loginContainer {
+  /* background-color: yellow; */
+  max-width: 800px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 15vh 0;
+}
+.form form {
+  display: flex;
+  flex-direction: column;
+}
+.form form input {
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 10px;
+  margin: 8px 0;
+  font-size: 17px;
+  background-color: #f0f5f8;
+  width: 100%;
+}
+.form form button {
+  outline: none;
+  border: none;
+  padding: 8px 10px;
+  background-color: #1c96e8;
+  cursor: pointer;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 17px;
+  margin-top: 15px;
+  font-weight: 700;
+}
+.form {
+  padding: 40px;
+  /* background-color: yellow; */
+  box-shadow: 0 0 25px 1px #1c96e8;
+  border-radius: 10px;
+  width: 55%;
+  overflow: hidden;
+}
+.form h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  margin: 10px 0;
+}
+.form h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  margin: 10px 0;
+}
+.form > p {
+  font-family: "Roboto", sans-serif;
+  margin: 15px 0;
+  text-align: center;
+}
+.form > p > a {
+  font-weight: 700;
+  color: #1c96e8;
+}
+.tweetLogo {
+  font-size: 110px;
+  color: #1c96e8;
+  overflow: hidden;
+}
