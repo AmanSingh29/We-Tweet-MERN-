@@ -28,6 +28,12 @@ const userSchema = new mongoose.Schema(
         ref: "User",
       },
     ],
+    followings: [
+      {
+        type: ObjectId,
+        ref: "User",
+      },
+    ],
     profilePicture: {
       type: String,
     },
