@@ -56,7 +56,7 @@ exports.handleLoginController = async (req, res) => {
         .status(400)
         .json({ status: "fail", msg: "Please check username or password !" });
     }
-    const passCompare = bcryptjs.compare(password, userInDb.password);
+    const passCompare = await bcryptjs.compare(password, userInDb.password);
     if (!passCompare) {
       return res
         .status(400)

@@ -67,3 +67,10 @@
   color: #1c96e8;
   overflow: hidden;
 }
+
+.errMsg {
+  text-align: center;
+  color: red;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+}

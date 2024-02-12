@@ -8,6 +8,8 @@ import { RotatingLines } from "react-loader-spinner";
 
 const Register = () => {
   const [loader, setLoader] = useState(false);
+  const [showErr, setShowErr] = useState(false);
+  const [errMsg, setErrMsg] = useState("");
 
   useEffect(() => {
     Aos.init({
@@ -39,12 +41,18 @@ const Register = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        nameRef.current.value = "";
-        emailRef.current.value = "";
-        usernameRef.current.value = "";
-        passwordRef.current.value = "";
-        setLoader(false);
-        navigate("/");
+        if (data.status === "success") {
+          nameRef.current.value = "";
+          emailRef.current.value = "";
+          usernameRef.current.value = "";
+          passwordRef.current.value = "";
+          setLoader(false);
+          navigate("/");
+        } else if (data.status === "fail") {
+          setErrMsg(data.msg);
+          setLoader(false);
+          setShowErr(true);
+        }
       })
       .catch((err) => console.log(err));
   };
@@ -71,6 +79,7 @@ const Register = () => {
               type="password"
               placeholder="Enter password.."
             />
+            {showErr ? <p className={styles.errMsg}>{errMsg}</p> : ""}
             <button type="submit">
               {loader ? (
                 <RotatingLines height="25" width="25" strokeColor="white" />
