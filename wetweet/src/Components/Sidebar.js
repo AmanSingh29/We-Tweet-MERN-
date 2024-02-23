@@ -3,37 +3,30 @@ import styles from "../Css/sidebar.module.css";
 import { FaTwitter, FaHome } from "react-icons/fa";
 import { BsPersonFill } from "react-icons/bs";
 import { BiExit } from "react-icons/bi";
-import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   return (
     <div className={styles.sidebarCont}>
-      <div className={styles.sidebarTop}>
+      <div className={styles.homeTop}>
         <div className={styles.homeLogo}>
           <div className={styles.logo}>
             <FaTwitter />
           </div>
           <div className={styles.title}>We-Tweet</div>
         </div>
-        <div className={styles.homeLinks}>
-          <div>
-            <Link to={"/home"}>
-              <FaHome /> Home
-            </Link>
+        <div className={styles.linksContainer}>
+          <div className={styles.links}>
+            <FaHome className={styles.icons} /> HOME
           </div>
-          <div>
-            <Link to={"#"}>
-              <BsPersonFill /> Profile
-            </Link>
+          <div className={styles.links}>
+            <BsPersonFill className={styles.icons} /> PROFILE
           </div>
-          <div>
-            <Link to={"/"}>
-              <BiExit /> Log Out
-            </Link>
+          <div className={styles.links}>
+            <BiExit className={styles.icons} /> LOGOUT
           </div>
         </div>
       </div>
-      <div className={styles.sidebarBottom}>Bottom</div>
+      <div className={styles.homeBottom}>hello</div>
     </div>
   );
 };
