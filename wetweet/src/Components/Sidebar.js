@@ -3,6 +3,7 @@ import styles from "../Css/sidebar.module.css";
 import { FaTwitter, FaHome } from "react-icons/fa";
 import { BsPersonFill } from "react-icons/bs";
 import { BiExit } from "react-icons/bi";
+import Profile from "../Images/profile.jpg";
 
 const Sidebar = () => {
   return (
@@ -26,7 +27,15 @@ const Sidebar = () => {
           </div>
         </div>
       </div>
-      <div className={styles.homeBottom}>hello</div>
+      <div className={styles.homeBottom}>
+        <div className={styles.profileImg}>
+          <img src={Profile} alt="profile-img" />
+        </div>
+        <div className={styles.profileDetails}>
+          <p className={styles.username}>@aman2987</p>
+          <p className={styles.name}>Aman Singh</p>
+        </div>
+      </div>
     </div>
   );
 };

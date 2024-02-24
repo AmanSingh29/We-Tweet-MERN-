@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+
+.tweetCont {
+  width: 100%;
+  margin: 10px 0;
+  /* background-color: rgb(149, 218, 241); */
+  padding: 7px;
+  border: 1px solid rgb(189, 186, 186);
+  border-radius: 5px;
+  /* height: 200px; */
+  display: flex;
+  justify-content: space-between;
+}
+.profile {
+  width: 8%;
+  /* background-color: red; */
+}
+.tweetDetails {
+  width: 90%;
+}
+.profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.tweetedPerson {
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.deleteIcon {
+  font-size: 20px;
+  cursor: pointer;
+}
+.tweetImage {
+  width: 95%;
+}
+.tweetImage img {
+  width: 100%;
+  border-radius: 5px;
+}
+.tweeteIcons {
+  display: flex;
+}
+.icons {
+  font-size: 25px;
+  margin: 0 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.icons > span {
+  font-family: "Roboto", sans-serif;
+  font-size: 22px;
+  margin-right: 3px;
+}
+.heartIcon {
+  color: red;
+}
+.replyIcon {
+  color: blue;
+}
+.retweetIcon {
+  color: green;
+}
+.person > span:nth-child(1) {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+}
+.person > span:nth-child(1):hover {
+  border-bottom: 2px solid rgb(100, 98, 98);
+}
+.tweetContent {
+  margin: 10px 0;
+  font-family: sans-serif;
+  font-size: 15px;
+  color: rgb(63, 63, 63);
+}
